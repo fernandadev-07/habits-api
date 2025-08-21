@@ -1,38 +1,43 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
+import { CreateUserDto } from './dto/create-user.dto';
+import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UsersService {
-    constructor(private prisma: PrismaService){}
-    // para criar um usuário
-    async createUser(data: { email: string; name: string }) {
-        return this.prisma.user.create({ data });
-        // depois adicionar o relacionamento com os hábitos
-    }
-    // para acessar os usuários
-    async getUsers() {
-        return this.prisma.user.findMany();
-    }
+  constructor(private prisma: PrismaService) {}
 
-    // get de um usuário só
-    async getUser(id: number){
-        return this.prisma.user.findUnique({
-            where:{ id },
+  // Criar usuário
+  async createUser(createUserDto: CreateUserDto) {
+    return this.prisma.user.create({
+      data: createUserDto,
+    });
+  }
 
-        })
-    }
-    // deletar usuário
-    async deleteUser(id: number){
-        return this.prisma.user.delete({
-            where:{ id },
-        })
-    }
-    // editar usuário
-    async updateUser(id: number, data:{ email?: string; name?: string }){
-        return this.prisma.user.update({
-            where:{ id },
-            data,
-        })
-    }
+  // Listar todos os usuários
+  async getUsers() {
+    return this.prisma.user.findMany();
+  }
 
+  // Pegar um usuário pelo ID
+  async getUser(id: number) {
+    return this.prisma.user.findUnique({
+      where: { id },
+    });
+  }
+
+  // Atualizar usuário
+  async updateUser(id: number, updateUserDto: UpdateUserDto) {
+    return this.prisma.user.update({
+      where: { id },
+      data: updateUserDto,
+    });
+  }
+
+  // Deletar usuário
+  async deleteUser(id: number) {
+    return this.prisma.user.delete({
+      where: { id },
+    });
+  }
 }
