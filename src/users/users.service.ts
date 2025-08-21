@@ -13,13 +13,15 @@ export class UsersService {
       include: { habits: true },
     });
   }
-
+  
+//Listar todos os usuários 
   async getUsers() {
     return this.prisma.user.findMany({
       include: { habits: true },
     });
   }
 
+ 
   async getUser(id: number) {
     return this.prisma.user.findUnique({
       where: { id },
@@ -27,12 +29,14 @@ export class UsersService {
     });
   }
 
+  //Deletar usuário
   async deleteUser(id: number) {
     return this.prisma.user.delete({
       where: { id },
     });
   }
 
+//Atualizar usuário 
   async updateUser(id: number, data: UpdateUserDto) {
     return this.prisma.user.update({
       where: { id },

@@ -1,9 +1,9 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsNotEmpty, IsInt } from 'class-validator';
 
 export class CreateHabitDto {
   @IsNotEmpty()
   title: string;
 
-  @IsNotEmpty()
-  userId: number;
+  @IsInt()
+  userId: number; // Cada hábito precisa pertencer a um usuário
 }
