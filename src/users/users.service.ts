@@ -15,6 +15,24 @@ export class UsersService {
     }
 
     // get de um usuário só
+    async getUser(id: number){
+        return this.prisma.user.findUnique({
+            where:{ id },
+
+        })
+    }
     // deletar usuário
+    async deleteUser(id: number){
+        return this.prisma.user.delete({
+            where:{ id },
+        })
+    }
     // editar usuário
+    async updateUser(id: number, data:{ email?: string; name?: string }){
+        return this.prisma.user.update({
+            where:{ id },
+            data,
+        })
+    }
+
 }
