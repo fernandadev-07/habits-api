@@ -60,7 +60,7 @@ http://localhost:3000
 POST http://localhost:3000/users
 ```
 <p align="center">
-  <img src="./imagens/postUser.png" width="400px">
+  <img src="./imagens/postUser.png">
 </p>
 
 ### Listar usuários 
@@ -68,7 +68,7 @@ POST http://localhost:3000/users
 GET http://localhost:3000/users
 ```
 <p align="center">
-  <img src="./imagens/getUsers.png" width="400px">
+  <img src="./imagens/getUsers.png">
 </p>
 
 ### Buscar usuário pelo id
@@ -76,7 +76,7 @@ GET http://localhost:3000/users
 GET http://localhost:3000/users/id
 ```
 <p align="center">
-  <img src="./imagens/getUser.png" width="400px">
+  <img src="./imagens/getUser.png">
 </p>
 
 
@@ -85,7 +85,7 @@ GET http://localhost:3000/users/id
 DELETE http://localhost:3000/users/id
 ```
 <p align="center">
-  <img src="./imagens/deleteUser.png" width="400px">
+  <img src="./imagens/deleteUser.png">
 </p>
 
 ### Cadastro de hábito 
@@ -93,7 +93,7 @@ DELETE http://localhost:3000/users/id
 POST http://localhost:3000/habits
 ```
 <p align="center">
-  <img src="./imagens/postHabit.png" width="400px">
+  <img src="./imagens/postHabit.png">
 </p>
 
 ### Listar hábitos
@@ -101,7 +101,7 @@ POST http://localhost:3000/habits
 GET http://localhost:3000/habits
 ```
 <p align="center">
-  <img src="./imagens/getHabits.png" width="400px">
+  <img src="./imagens/getHabits.png">
 </p>
 
 ### Edição de hábitos
@@ -109,7 +109,7 @@ GET http://localhost:3000/habits
 PATCH http://localhost:3000/habits/id
 ```
 <p align="center">
-  <img src="./imagens/editHabit.png" width="400px">
+  <img src="./imagens/editHabit.png">
 </p>
 
 ### Deleção de hábitos
@@ -117,6 +117,6 @@ PATCH http://localhost:3000/habits/id
 DELETE http://localhost:3000/habits/id
 ```
 <p align="center">
-  <img src="./imagens/deleteHabit.png" width="400px">
+  <img src="./imagens/deleteHabit.png">
 </p>
 
